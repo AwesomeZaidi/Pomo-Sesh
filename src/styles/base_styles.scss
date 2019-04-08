@@ -1,9 +1,75 @@
 @import './variables.scss';
 
-html, body {
-    margin: 0;
-    padding: 0;
-    font-size: 16px;
-    font-family: regular;
+
+/* BASE STYLES: VARIABLES */
+
+.flex, %flex {
+    display: flex;
 }
 
+// might set up align-content later if it applies, probably wont though.
+.align-items_center, %align-items_center {
+    align-items: center;
+}
+
+.align-items_left, %align-items_left {
+    align-items: left;
+}
+
+.align-items_right, %align-items_right {
+    align-items: right;
+}
+
+.justify-content_center, %justify-content_center {
+    justify-content: center;
+}
+
+.justify-content_space-between, %justify-content_space-between {
+    justify-content: space-between;
+}
+
+.align-items_left, %align-items_left {
+    display: flex;
+}
+
+.align-items_right, %align-items_right {
+    display: flex;
+    -webkit-transition: none;
+    -moz-transition: none;
+         transition: none;
+}
+
+.red-grad-bg, %red-grad-bg {
+    background: linear-gradient(135deg,#d20e63,#e75a50 95%);
+}
+.red-grad-bg:hover, %red-grad-bg:hover {
+    background: linear-gradient(135deg, #e75a50, #d20e63 95%);
+}
+
+.red-grad-color, %red-grad-color {
+    background: -webkit-linear-gradient(135deg,#d20e63,#e75a50 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.red-grad-color:hover, %red-grad-color:hover {
+    background: -webkit-linear-gradient(135deg, #e75a50, #d20e63 95%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// NOT WORKING D:
+// https://medium.com/@dave_lunny/animating-css-gradients-using-only-css-d2fd7671e759
+// .btn_primary {
+//     z-index: 100;
+//     @extend %red-grad-bg;
+//     &:before {
+//         z-index: -100;
+//         @extend %red-grad-bg-reverse;
+//         transition: opacity 0.45s;
+//     }
+//     &:hover {
+//         &:before {
+//           opacity: 1;
+//         }
+//     }
+// }

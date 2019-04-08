@@ -1,0 +1,17 @@
+@import 'variables';
+
+@include desktop {
+    .home {
+        padding: 16px;
+    }
+}
+
+
+@include tablet {
+    
+}
+
+
+@include phone {
+
+}

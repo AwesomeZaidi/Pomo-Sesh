@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 import reducers from './redux/reducers/';
+import Home from './pages/Home';
 import './styles/styles.scss';
 
 
@@ -11,9 +13,12 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-            <div className="App">
-            <h1>Asim</h1>
-            </div>
+        <BrowserRouter>
+          <Switch>
+		  <Route exact path="/" component={Home} />
+
+          </Switch>
+        </BrowserRouter>
       </Provider>
     );
   }

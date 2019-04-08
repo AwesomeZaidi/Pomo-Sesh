@@ -1,0 +1,31 @@
+@import './base_styles.scss';
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    font-size: 16px;
+    font-family: regular;
+}
+
+#root {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.center {
+    @extend %flex;
+    @extend %justify-content_center;
+    @extend %align-items_center;
+}
+
+.main-content {
+    min-height: 80vh;
+}
+
+// implement top down center
+// implement top down left
+// implement top down right
+
