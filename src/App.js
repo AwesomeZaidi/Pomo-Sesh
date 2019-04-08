@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './redux/reducers/';
+import './styles/styles.scss';
+
 
 const store = createStore(reducers);
 
