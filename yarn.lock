@@ -8211,6 +8211,11 @@ react-app-polyfill@^0.2.2:
     raf "3.4.1"
     whatwg-fetch "3.0.0"
 
+react-countdown-timer-component@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-countdown-timer-component/-/react-countdown-timer-component-1.0.2.tgz#75f72f8dbe5e77351d7258aecd6815acc5cd57d8"
+  integrity sha512-av5o4rSTMzqoFPpNtF1ZSI5txDLRWJNQRF4GHCMm5ccm7qPoTEv5qAWyb1WfSIsWMXX2vfAyCNktVCaEZCbKMA==
+
 react-dev-utils@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/react-dev-utils/-/react-dev-utils-8.0.0.tgz#7c5b227a45a32ea8ff7fbc318f336cf9e2c6e34c"

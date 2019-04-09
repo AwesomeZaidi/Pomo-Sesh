@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../../styles/home.scss';
 import StartBtn from '../../components/StartBtn';
+import Timer from '../../components/Timer';
 
 class Home extends Component {
     constructor(props) {
@@ -22,8 +23,10 @@ class Home extends Component {
         return (
             <div className='home'>
                 <i className="fas fa-cog red-grad-color"></i>
-                { this.state.started ? <p>Timer</p> : <StartBtn handler={this.handler}/> }
-                
+                { this.state.started ?
+                <Timer minutes={'25'} seconds={'00'} />
+                :
+                <StartBtn handler={this.handler}/> }  
             </div>
         )
     };

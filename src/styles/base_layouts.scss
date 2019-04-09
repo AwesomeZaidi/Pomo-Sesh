@@ -25,6 +25,11 @@ html, body {
     min-height: 80vh;
 }
 
+.timer-display {
+    display: flex;
+    flex-direction: column;
+}
+
 // implement top down center
 // implement top down left
 // implement top down right
