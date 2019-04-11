@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CountdownTimer from "react-countdown-timer-component";
 
 class Timer extends Component {
     constructor(props) {
@@ -11,12 +10,11 @@ class Timer extends Component {
             ms: 0,
             running: false
           };
-        // this.countdown = this.countdown.bind(this);
+          
     };
 
     componentDidMount() {
-        // let t = 0
-        this.lastMS = Date.now() // returns current time in ms 
+        this.lastMS = Date.now() // returns current time in ms
         this.intervalId = setInterval(() => {
             const now = Date.now()
             const dt = now - this.lastMS
@@ -35,18 +33,6 @@ class Timer extends Component {
         clearInterval(this.intervalId)
     }
 
-    // countdown() {
-    //     console.log('in func');
-    //     for (let second = 60; second > 0; second--) {
-    //         console.log('second:', second);
-    //         setTimeout(
-    //             second -= 1,
-    //             console.log('second:', second),
-
-    //         1000); 
-    //     }
-    // }
-
     paddWithZero(n) {
         return n < 10 ? `0${n}` : `${n}`
     }
@@ -56,7 +42,7 @@ class Timer extends Component {
         const mins = Math.floor(secs / 60) 
         const hrs = Math.floor(mins / 60) 
         // const days = Math.floor(hrs / 24)
-        return `${this.paddWithZero(hrs % 60)}:${this.paddWithZero(mins % 60)}:${this.paddWithZero(secs % 60)}` // moddin the minutes
+        return `${this.paddWithZero(mins % 60)}:${this.paddWithZero(secs % 60)}` // moddin the minutes
     }
 
     render() {
@@ -64,7 +50,6 @@ class Timer extends Component {
         <div className='center main-content timer-display'>
             {/* {this.countdown} */}
             <h1>{this.formatTime(this.state.ms)}</h1>
-            <h1>{this.state.minutes}:{this.state.seconds}</h1>
             <button className='btn_primary red-grad-bg'>Pause</button>
         </div>
         )

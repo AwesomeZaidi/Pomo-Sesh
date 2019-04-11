@@ -4,11 +4,10 @@ import Timer from '../../utils/Timer/';
 
 const timerReducer = (state = [], action) => {
   switch (action.type) {
-    case NEW_TIMER:
+    case NEW_TIMER: // wut is goin onn herree...
       // Add a new timer, return a copy of state
       const name = action.payload.name ? action.payload.name : `Timer ${state.length}`
       return [...state, new Timer(name)]
-
     case TOGGLE_TIMER:
       // Invert the isRunning property of timer at index, return a copy of state
       const newState = state.map((timer, index) => {
